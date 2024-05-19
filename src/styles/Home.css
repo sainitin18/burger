@@ -1,0 +1,99 @@
+.home {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  animation: expandContract 1s infinite alternate;
+}
+
+@keyframes expandContract {
+  0% {
+    background-size: 40%;
+  }
+
+  90% {
+    background-size: 45%;
+  }
+}
+
+.headerContainer {
+  width: 45%;
+  padding: 20px;
+  box-sizing: border-box;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.headerContainer h1 {
+  font-size: 60px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.burgerText {
+  color: red;
+  font-family: cursive;
+}
+
+.headerContainer p {
+  font-size: 20px;
+  margin-top: 10px;
+  color: black;
+}
+
+.headerContainer button {
+  margin-top: 20px;
+  background-color: #121619;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.headerContainer button:hover {
+  background-color: red;
+  transition: 0.3s ease-in;
+}
+
+@media only screen and (max-width: 650px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .headerContainer {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .headerContainer button {
+    background-color: white;
+    color: #121619;
+  }
+
+  .headerContainer button:hover {
+    background-color: rgb(225, 225, 225);
+    color: #121619;
+  }
+}

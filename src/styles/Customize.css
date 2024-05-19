@@ -1,0 +1,97 @@
+.customize {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.customize .customizeTitle {
+  font-family: cursive;
+  font-size: 60px;
+}
+
+.customizeList {
+  width: 70vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+}
+
+/* customize ITEM STYLING */
+
+.customizeItem {
+  border-radius: 15px;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.customizeItem:hover {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.customizeItem div {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.customizeItem h1,
+h4 {
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+.customizeItem .button1 {
+  padding: 10px;
+  margin: 10px 10px 5px 25px;
+}
+
+.customizeItem .button2 {
+  padding: 10px;
+  margin: 10px 0px 5px 15px
+}
+
+.customize .buy {
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: center;
+  background-color: #121619;
+  height: 50px;
+  width: 180px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.customize .buy:hover {
+  background-color: blue;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+@media only screen and (max-width: 1300px) {
+  .customizeList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .customizeList {
+    grid-template-columns: 1fr;
+  }
+}
